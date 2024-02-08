@@ -16,10 +16,6 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
     name: "Skills",
     hash: "#skills",
   },
@@ -35,28 +31,44 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "CTO",
+    location: "Sleepzzone, Madrid",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Led the strategic management and orchestrated the development and maintenance of robust cloud infrastructures of a dynamic SleepTech startup.",
+    icon: React.createElement(CgWorkAlt),
+    date: "01/2023 - 01/2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Advanced App Engineer",
+    location: "Accenture, Madrid",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Development of features for multiple clients. These projects where based in Java using the Spring framework.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "09/2022 - 10/2023",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Selectra, Madrid",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Development and improvement of Drupal modules using PHP as the back-end language as well as JS, HTML5 and CSS/SCSS for the front-end.",
+    icon: React.createElement(CgWorkAlt),
+    date: "09/2021 - 09/2022",
+  },
+  {
+    title: "Back-End Developer",
+    location: "Univ Carlos III, Madrid",
+    description:
+      "Development of several applications using tools such as spring-mvc, mongoDB, PHP, MySQL and Laravel.",
+    icon: React.createElement(CgWorkAlt),
+    date: "06/2020 - 09/2020",
+  },
+  {
+    title: "Software Developer",
+    location: "HI Iberia, Madrid",
+    description:
+      "Development and implementation of software in the following functional areas: e-health, security, education, mobility, etc.",
+    icon: React.createElement(CgWorkAlt),
+    date: "06/2019 - 07/2019",
   },
 ] as const;
 
@@ -85,23 +97,22 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Java",
+  "SQL",
+  "MongoDB",
+  "PostgreSQL",
+  "Git",
+  "AWS",
+  "GCP",
+  "Jenkins",
+  "Github Actions",
+  "Python",
+  "Node.js",
+  "Express",
   "HTML",
   "CSS",
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
 ] as const;
