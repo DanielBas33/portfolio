@@ -42,27 +42,19 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col "
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);
             return;
           }
 
-          toast(
-            "The email sending functionality is currently under maintenance",
-            {
-              duration: 6000,
-              position: "top-center",
-              icon: "⚠️",
-            }
-          );
-          //toast.success("Email sent successfully!");
+          toast.success("Email sent successfully!");
         }}
       >
         <input
           className="h-14 px-4 rounded-lg borderBlack  transition-all"
-          name="senderEmail"
+          name="email"
           type="email"
           required
           maxLength={500}

@@ -7,6 +7,7 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
   });
+  if (sectionName == "About") console.log(inView);
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {

@@ -3,16 +3,13 @@
 import React from "react";
 //import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
-
-//const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
+  const email = formData.get("email");
   const message = formData.get("message");
 
   // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
+  if (!validateString(email, 500)) {
     return {
       error: "Invalid sender email",
     };
@@ -22,30 +19,23 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
-
-  let data;
   try {
-    // Change this for actual email sending
-    console.log("Email sent");
-    console.log(senderEmail);
-    console.log(message);
-    // data = await resend.emails.send({
-    //   from: "Contact Form <onboarding@resend.dev>",
-    //   to: "bytegrad@gmail.com",
-    //   subject: "Message from contact form",
-    //   reply_to: senderEmail,
-    //   react: React.createElement(ContactFormEmail, {
-    //     message: message,
-    //     senderEmail: senderEmail,
-    //   }),
-    // });
+    // Sending email request to api gateway in AWS
+    const messageData = { email, message };
+    const res = await fetch(
+      `https://c65key17bb.execute-api.us-east-1.amazonaws.com/prod/sendEmail`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(messageData),
+      }
+    );
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
     };
   }
-
-  return {
-    data,
-  };
+  return {};
 };

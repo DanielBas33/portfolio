@@ -19,20 +19,19 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span>, I decided to try
-        out different roles as a developer. I know find cloud and data related
-        roles fascinating and would love to transition. After passing my{" "}
-        <span className="font-medium">AWS Solutions Architect Associate</span>
-        exam I decided to dedicate some time to improving my cloud skills
-        through profitable projects.{" "}
-        <span className="italic">Im passionate about</span> helping others
-        understand all of the pros the cloud has as well as create architectures
-        based on the{" "}
-        <span className="underline">Well Architected Framework</span>. I am
-        currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a AWS
-        solutions architect.
+        With a degree in <span className="font-medium">Computer Science</span>,
+        my journey as a software developer began. Now, my fascination lies in
+        roles that intertwine cloud technology and data. After successfully
+        earning my{" "}
+        <span className="font-medium">AWS Solutions Architect Associate</span>{" "}
+        certification, I decided to channel my energy into enhancing my cloud
+        skills through meaningful projects.
+        <span className="italic"> Passionate about</span> not just the
+        technology but also the impact it serves over people. Currently on the
+        lookout for a <span className="font-medium"> position</span> as an AWS
+        Solutions Architect Or Cloud Engineer, my objective is to bring
+        technical expertise and deliver substantial{" "}
+        <span className="font-medium">Business Value</span>.
       </p>
 
       <p>
