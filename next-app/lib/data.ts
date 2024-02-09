@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import corpcommentImg from "@/public/corpcomment.png";
+import portfolioImage from "@/public/portoflioImg.png";
 
 export const links = [
   {
@@ -85,10 +85,9 @@ export const projectsData = [
       "Api Gateway",
       "Route53",
       "Certificate Manager",
-
       "Terraform",
     ],
-    imageUrl: corpcommentImg,
+    imageUrl: portfolioImage,
   },
 ] as const;
 
