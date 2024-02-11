@@ -23,7 +23,7 @@ export const sendEmail = async (formData: FormData) => {
     // Sending email request to api gateway in AWS
     const messageData = { email, message };
     const res = await fetch(
-      `https://c65key17bb.execute-api.us-east-1.amazonaws.com/prod/sendEmail`,
+      `https://z6qdw68uzb.execute-api.us-east-1.amazonaws.com/serverless_lambda_resend_email_stage/sendEmail`,
       {
         method: "POST",
         headers: {
