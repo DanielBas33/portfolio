@@ -3,6 +3,7 @@ provider "aws" {
 
 }
 
+#Random name for our bucket
 resource "random_pet" "lambda_bucket_name" {
   prefix = "resend-email-bucket"
   length = 4
@@ -26,6 +27,7 @@ resource "aws_s3_bucket_acl" "lambda_bucket" {
   acl    = "private"
 }
 
+# Create a ZIP from your lambda function
 data "archive_file" "lambda_resend_email" {
   type = "zip"
 
@@ -33,6 +35,7 @@ data "archive_file" "lambda_resend_email" {
   output_path = "${path.module}/resendEmail.zip"
 }
 
+# Upload your ZIP to the created bucket
 resource "aws_s3_object" "lambda_resend_email" {
   bucket = aws_s3_bucket.lambda_bucket.id
 
@@ -42,6 +45,7 @@ resource "aws_s3_object" "lambda_resend_email" {
   etag = filemd5(data.archive_file.lambda_resend_email.output_path)
 }
 
+# Use content on the created bucket to create a lambda function
 resource "aws_lambda_function" "resendEmail" {
   function_name = "resendEmail"
 
@@ -56,12 +60,14 @@ resource "aws_lambda_function" "resendEmail" {
   role = aws_iam_role.lambda_exec.arn
 }
 
+# Create logs for your lambda function (optional)
 resource "aws_cloudwatch_log_group" "resendEmail" {
   name = "/aws/lambda/${aws_lambda_function.resendEmail.function_name}"
 
   retention_in_days = 30
 }
 
+# Creation of role and basic permissions for lambda
 resource "aws_iam_role" "lambda_exec" {
   name = "serverless_lambda_resend_email"
 
@@ -91,7 +97,6 @@ resource "aws_iam_policy" "SSM_GetResendKey_policy" {
   name        = "AccessResendKey"
   description = "Custom policy for Lambda function"
 
-  // Define your custom policy document here
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
@@ -111,6 +116,7 @@ resource "aws_iam_role_policy_attachment" "custom_lambda_policy_attachment" {
 }
 
 
+# Creating API Gateway HTTP API
 resource "aws_apigatewayv2_api" "lambda" {
   name          = "serverless_lambda_resend_email_gw"
   protocol_type = "HTTP"
@@ -122,7 +128,7 @@ resource "aws_apigatewayv2_api" "lambda" {
   }
 }
 
-
+# Create your stage to deploy the api
 resource "aws_apigatewayv2_stage" "lambda" {
   api_id = aws_apigatewayv2_api.lambda.id
 
@@ -148,6 +154,7 @@ resource "aws_apigatewayv2_stage" "lambda" {
   }
 }
 
+# Create a lambda integration the API
 resource "aws_apigatewayv2_integration" "resendEmail" {
   api_id = aws_apigatewayv2_api.lambda.id
 
@@ -156,6 +163,7 @@ resource "aws_apigatewayv2_integration" "resendEmail" {
   integration_method = "POST"
 }
 
+# Create API route and target
 resource "aws_apigatewayv2_route" "resendEmail" {
   api_id = aws_apigatewayv2_api.lambda.id
 
@@ -163,12 +171,14 @@ resource "aws_apigatewayv2_route" "resendEmail" {
   target    = "integrations/${aws_apigatewayv2_integration.resendEmail.id}"
 }
 
+# Logs for the api (Optional)
 resource "aws_cloudwatch_log_group" "api_gw" {
   name = "/aws/api_gw/${aws_apigatewayv2_api.lambda.name}"
 
   retention_in_days = 30
 }
 
+# Required permission
 resource "aws_lambda_permission" "api_gw" {
   statement_id  = "AllowExecutionFromAPIGateway"
   action        = "lambda:InvokeFunction"
