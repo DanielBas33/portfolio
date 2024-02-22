@@ -87,6 +87,7 @@ export const projectsData = [
       "Certificate Manager",
       "Terraform",
     ],
+    url: "https://danielbas.notion.site/Serverless-Cloud-Portfolio-c57d94c34ac54fd3bdf3bc33e004fce9?pvs=4",
     imageUrl: portfolioImage,
   },
 ] as const;
