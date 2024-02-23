@@ -7,9 +7,11 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { useTranslation } from "next-export-i18n";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const { t } = useTranslation();
 
   return (
     <motion.section
@@ -29,14 +31,14 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>{t("contact.heading")}</SectionHeading>
 
       <p className="text-gray-700 -mt-6 ">
-        Please contact me directly at{" "}
+        {t("contact.1")}{" "}
         <a className="underline" href="mailto:danielbasdelgado@gmail.com">
           danielbasdelgado@gmail.com
         </a>{" "}
-        or through this form.
+        {t("contact.2")}
       </p>
 
       <form

@@ -1,0 +1,47 @@
+{
+  "header": {
+    "Home": "Home",
+    "About": "About",
+    "Skills": "Skills",
+    "Experience": "Experience",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+  "intro": {
+    "1": "Hello, I'm Daniel.",
+    "2": "A ",
+    "3": "software engineer",
+    "4": "with 3 years of experience in crafting applications with programming languages like ",
+    "5": "Java.",
+    "contact": "Contacta me here",
+    "cv": "Download CV"
+  },
+  "about": {
+    "heading": "About me",
+    "1": "Armed with a degree in ",
+    "2": "Computer Science",
+    "3": ", I embarked on my journey as asoftware engineer. Throughout my career, I've cultivated a deep interest in roles that seamlessly integrate cloud technology. Having achieved the ",
+    "4": "AWS Solutions Architect Associate",
+    "5": " certification I am driven to amplify my expertise through purposeful projects. I am currently on the lookout for a position as a Java software engineer, where I already have 2 years of experience, with the possibility of learning and advancing towards roles such as Solutions Architect or Cloud Engineer."
+  },
+  "skills": {
+    "heading": "My Skills"
+  },
+  "projectsData": {
+    "heading": "My Projects",
+    "Cloud Portfolio": "I created a portfolio website using multiple AWS services as well as an IaC approach with Terraform. "
+  },
+  "experiencesData": {
+    "heading": "My Experience",
+    "CTO": "Led the strategic management and orchestrated the development and maintenance of robust cloud infrastructures of a dynamic SleepTech startup.",
+    "Software Engineer": "Development of features for multiple clients. These projects where based in Java using the Spring framework.",
+    "Full-Stack Developer": "Development and improvement of Drupal modules using PHP as the back-end language as well as JS, HTML5 and CSS/SCSS for the front-end.",
+    "Back-End Developer": "Development of several applications using Java with Spring, mongoDB and MySQL.",
+    "Software Developer": "Development and implementation of Java software in the following functional areas: e-health, security, education, mobility, etc."
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "1": "Please contact me directly at",
+    "2": "or through this form."
+  }
+}

@@ -39,7 +39,7 @@ export const experiencesData = [
     date: "01/2023 - 01/2024",
   },
   {
-    title: "Advanced App Engineer",
+    title: "Software Engineer",
     location: "Accenture, Madrid",
     description:
       "Development of features for multiple clients. These projects where based in Java using the Spring framework.",
@@ -58,7 +58,7 @@ export const experiencesData = [
     title: "Back-End Developer",
     location: "Univ Carlos III, Madrid",
     description:
-      "Development of several applications using tools such as spring-mvc, mongoDB, PHP, MySQL and Laravel.",
+      "Development of several applications using Java with Spring, mongoDB and MySQL.",
     icon: React.createElement(CgWorkAlt),
     date: "06/2020 - 09/2020",
   },
@@ -94,19 +94,16 @@ export const projectsData = [
 
 export const skillsData = [
   "Java",
+  "Spring Boot",
   "SQL",
   "MongoDB",
   "PostgreSQL",
-  "Git",
   "AWS",
-  "GCP",
+  "Git",
+  "Terraform",
   "Jenkins",
-  "Github Actions",
   "Python",
   "Node.js",
-  "Express",
-  "HTML",
-  "CSS",
   "JavaScript",
   "TypeScript",
   "React",

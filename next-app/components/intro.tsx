@@ -10,10 +10,12 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import daniel from "@/public/daniel.jpeg";
+import { useTranslation } from "next-export-i18n";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { t } = useTranslation();
 
   return (
     <section
@@ -49,11 +51,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Daniel.</span> I'm a{" "}
-        <span className="font-bold">software engineer</span> with{" "}
-        <span className="font-bold">3 years</span> of experience. I currently
-        enjoy building <span className="italic">cloud projects</span>. My focus
-        is <span className="underline">AWS</span>.
+        <span className="font-bold">{t("intro.1")}</span> {t("intro.2")}{" "}
+        <span className="font-bold">{t("intro.3")}</span> {t("intro.4")}{" "}
+        <span className="font-bold">{t("intro.5")}</span>
       </motion.h1>
 
       <motion.div
@@ -72,16 +72,16 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          {t("intro.contact")}{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack "
-          href="/CV.pdf"
+          href="/CV_English_Daniel_Bas_Delgado.pdf"
           download
         >
-          Download CV{" "}
+          {t("intro.cv")}{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 

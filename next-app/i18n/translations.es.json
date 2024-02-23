@@ -1,0 +1,47 @@
+{
+  "header": {
+    "Home": "Inicio",
+    "About": "Acerca de",
+    "Skills": "Habilidades",
+    "Experience": "Experiencia",
+    "Projects": "Proyectos",
+    "Contact": "Contacto"
+  },
+  "intro": {
+    "1": "Hola, Soy Daniel.",
+    "2": "Un ",
+    "3": "ingeniero de software",
+    "4": "con 3 años de experiencia desarrollando aplicaciones con lenguajes de programación como ",
+    "5": "Java.",
+    "contact": "Contacta conmigo",
+    "cv": "Descarga mi CV"
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "1": "Con un grado en ",
+    "2": "Ingeniería Informática",
+    "3": " de la UC3M, comencé mi carrera como ingeniero de software. A lo largo de mi trayectoria profesional, he desarrollado un interés en roles que integran las tecnologias cloud. Después de obtener la certificación de ",
+    "4": "AWS Solutions Architect Associate",
+    "5": " me encuentro dedicado a ampliar mi experiencia a través de diversos proyectos. Actualmente, me encuentro en la búsqueda de una posición como ingeniero de software en Java, donde ya cuento con 2 años de experiencia. Aspiro a un entorno que me brinde la oportunidad de aprender y evolucionar hacia roles enfocados en cloud como Solutions Architect o Cloud Engineer."
+  },
+  "skills": {
+    "heading": "Mis Habilidades"
+  },
+  "projectsData": {
+    "heading": "Mis Proyectos",
+    "Cloud Portfolio": "Creé un sitio web de portafolio utilizando múltiples servicios de AWS, así como Infraestructura como Código (IaC) con Terraform."
+  },
+  "experiencesData": {
+    "heading": "Mi Experiencia",
+    "CTO": "Lideré la gestión estratégica y orquesté el desarrollo y mantenimiento de infraestructuras en la nube sólidas para una startup dinámica de SleepTech.",
+    "Software Engineer": "Desarrollo de características para múltiples clientes. Estos proyectos estaban basados en Java utilizando el framework Spring.",
+    "Full-Stack Developer": "Desarrollo y mejora de módulos de Drupal utilizando PHP como lenguaje de backend, así como JS, HTML5 y CSS/SCSS para el frontend.",
+    "Back-End Developer": "Desarrollo de varias aplicaciones utilizando Java con Spring, mongoDB y MySQL.",
+    "Software Developer": "Desarrollo e implementación de software Java en diversas áreas funcionales: e-salud, seguridad, educación, movilidad, etc."
+  },
+  "contact": {
+    "heading": "Contáctame",
+    "1": "Por favor, contáctame directamente, con mi correo, ",
+    "2": "o a través de este formulario."
+  }
+}
