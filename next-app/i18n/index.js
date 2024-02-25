@@ -9,7 +9,7 @@ const i18n = {
   defaultLang: "en",
   useBrowserDefault: false,
 
-  languageDataStore: "query" || "localStorage",
+  languageDataStore: "localStorage",
 };
 
 module.exports = i18n;
