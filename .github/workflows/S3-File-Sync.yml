@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - next-app
 
 env:
   AWS_REGION: us-east-1
