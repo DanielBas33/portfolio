@@ -1,0 +1,35 @@
+name: Upload Website
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - next-app
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: dbd-myportfolio-bucket
+
+defaults:
+  run:
+    working-directory: next-app
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: build website
+        run: npm run build
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+      - name: sync out folder with S3
+        run: aws s3 sync out s3://${{ env.S3_BUCKET }}
