@@ -13,6 +13,10 @@ defaults:
   run:
     working-directory: next-app
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
