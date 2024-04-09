@@ -29,7 +29,8 @@
   },
   "projectsData": {
     "heading": "My Projects",
-    "Cloud Portfolio": "I created a portfolio website using multiple AWS services as well as an IaC approach with Terraform. "
+    "Cloud Portfolio": "I created a portfolio website using multiple AWS services as well as an IaC approach with Terraform. ",
+    "Book Store": "I created a Bookstore application using Spring Boot. "
   },
   "experiencesData": {
     "heading": "My Experience",

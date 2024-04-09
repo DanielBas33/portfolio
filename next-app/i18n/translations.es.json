@@ -29,7 +29,8 @@
   },
   "projectsData": {
     "heading": "Mis Proyectos",
-    "Cloud Portfolio": "Creé un sitio web de portafolio utilizando múltiples servicios de AWS, así como Infraestructura como Código (IaC) con Terraform."
+    "Cloud Portfolio": "He creado un sitio web de portafolio utilizando múltiples servicios de AWS, así como Infraestructura como Código (IaC) con Terraform.",
+    "Book Store": "He creado una aplicación para comprar y vender libros usando Spring Boot "
   },
   "experiencesData": {
     "heading": "Mi Experiencia",

@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import portfolioImage from "@/public/portoflioImg.png";
+import springBootImage from "@/public/springBootImg.png";
 
 export const links = [
   {
@@ -89,6 +90,20 @@ export const projectsData = [
     ],
     url: "https://danielbas.notion.site/Serverless-Cloud-Portfolio-c57d94c34ac54fd3bdf3bc33e004fce9?pvs=4",
     imageUrl: portfolioImage,
+  },
+  {
+    title: "Book Store",
+    description: "I created a Bookstore application using Spring Boot.",
+    tags: [
+      "Spring Boot",
+      "Spring Web",
+      "Spring Security",
+      "Spring Data JPA",
+      "PostgreSQL",
+      "Docker-Compose",
+    ],
+    url: "https://danielbas.notion.site/BookStore-542d3c5608c945cf8647bcde96741d1c?pvs=4",
+    imageUrl: springBootImage,
   },
 ] as const;
 
