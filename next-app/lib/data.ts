@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import portfolioImage from "@/public/portoflioImg.png";
 import springBootImage from "@/public/springBootImg.png";
+import sleepzzoneImage from "@/public/sleepzzoneImg.png";
 
 export const links = [
   {
@@ -90,6 +91,14 @@ export const projectsData = [
     ],
     url: "https://danielbas.notion.site/Serverless-Cloud-Portfolio-c57d94c34ac54fd3bdf3bc33e004fce9?pvs=4",
     imageUrl: portfolioImage,
+  },
+  {
+    title: "SleepZzone",
+    description:
+      "I created a complete web app solution for a SleepTech Startup.",
+    tags: ["React Js", "Node Js", "Express", "Firebase", "Github Actions"],
+    url: "https://sleepzzone.com",
+    imageUrl: sleepzzoneImage,
   },
   {
     title: "Book Store",

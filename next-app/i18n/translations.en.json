@@ -30,7 +30,8 @@
   "projectsData": {
     "heading": "My Projects",
     "Cloud Portfolio": "I created a portfolio website using multiple AWS services as well as an IaC approach with Terraform. ",
-    "Book Store": "I created a Bookstore application using Spring Boot. "
+    "Book Store": "I created a Bookstore application using Spring Boot. ",
+    "SleepZzone": "I created a complete Web Application Solution for a SleepTech Startup using the FERN Stack. "
   },
   "experiencesData": {
     "heading": "My Experience",

@@ -29,8 +29,9 @@
   },
   "projectsData": {
     "heading": "Mis Proyectos",
-    "Cloud Portfolio": "He creado un sitio web de portafolio utilizando múltiples servicios de AWS, así como Infraestructura como Código (IaC) con Terraform.",
-    "Book Store": "He creado una aplicación para comprar y vender libros usando Spring Boot "
+    "Cloud Portfolio": "He creado mi portfolio web utilizando múltiples servicios de AWS, así como IaC con Terraform. ",
+    "Book Store": "He creado una aplicación para comprar y vender libros usando Spring Boot. ",
+    "SleepZzone": "He creado una aplicación web para una Startup del sector SleepTech usando el stack FERN. "
   },
   "experiencesData": {
     "heading": "Mi Experiencia",
